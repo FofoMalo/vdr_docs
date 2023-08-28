@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+# Acceuil
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Cette documentation se veut progressive dans le temps. J'ai réfléchi à une solution qui me permettrait de suivre l'évolution de la documentation à travers git, tout en le rendant public pour les responsables de mon stage. 
+mkdocs correspond parfaitement à l'écriture d'une documentation technique avec markdown et python.
 
-## Commands
+## [Cartographie_SI](../Cartographie_SI)
+!!! info "Réaliser la cartographie du Système d'information de la ville " 
+        [Resumé]
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## [Intranet de la ville](../Intanet_Vdr)
 
-## Project layout
+!!! info "Solution digital workplace" 
+    [Resumé]
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## [Solution OpenData](../OpenData_Vdr)
+
+!!! info "OpenData VDR" 
+    [Resumé]
+
+## [Propositions de Clauses RGPD à intégrer aux marchés publics](../RGPD_Vdr)
+
+!!! info "OpenData VDR" 
+    [Resumé]
+

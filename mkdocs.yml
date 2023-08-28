@@ -5,6 +5,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - toc.follow
+    - toc.integrate
     - navigation.top
     - search.suggest
     - search.hightlight
@@ -48,5 +49,4 @@ extra:
     provider: mike
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/FofoMalo" target "_blank" rel="glp3">Florent Malo</a>
-
+  &copy; 2023 Val de Reuil <a href="https://github.com/FofoMalo" target "_blank" rel="glp3">Florent Malo</a>
