@@ -1,103 +1,78 @@
 # Cartographie_SI
-## Cahier des charges : Analyse du besoin
+## Cahier des charges : Analyse du besoin, Introduction
+La mairie de Val-de-Reuil, dans sa vision à long terme souhaite disposer d'une cartographie de son système d'information. Il n'existe actuellement pas en l'état un document, une méthode de ce genre permettant d'avoir une vue globale du système d'information.
+L'état actuelle des lieux donne une vue suivante : il existe un 1. Le Responsable de la modernisation Numérique qui lui même travaille en étroite collaboration avec le Responsable de la Sécurité des Systèmes Informatique. Ce dernier porte également la casquette  d'administrateur des systèmes et du réseaux, Technicien.
+Il est assisté par un consultant extérieur pour ce qui est de la gestion des progiciels au compte de la mairie.
+Une de mes tâches principale sera d'analyser et de comprendre le besoin, fournir une solution durable permettant à la ville de se munir d'un outil efficace, propriétaire et simple à utiliser.
+Il existe un document élaborer par l'Agence Nationale de la Sécurité des Système d'information (ANSSI) qui donne une lecture de ce que devrait être une cartographie du SI.
+Les Organisme d'importance Vitale au sein garantissent la continuité du SI. Leur protection nécessitent une bonne lecture par les différents responsable du système d'information. La nécessité lorsqu'il n'y a que quelques personnes qui connaissent le système d'information en soi peut être une faille. 
+> Nul n'est à l'abri d'une erreur.
 
-La cartographie du système d'information permet de visualiser et comprendre l'ensemble des composants et des interconnexions du système d'information de la Mairie de Val-de-Reuil. Voici les étapes à suivre pour réaliser cette cartographie :
+C'est pour cela que mettre en place une cartographie qui fera les connections nécessaires des vues métiers, systèmes, réseaux permet de se munir d'outils éfficaces pour assurer une continuité des services, permettrent une meilleur intégration des système applicatifs au sein de l'environnement globale.
+En somme la ville et ses responsables auront une maîtrise du système d'information, la mairie disposera d'une connaissance de l'ensemble des composants du SI. De la protection du système d'information; nous pourrions en effet mieux identifier les systèmes les plus critiques et les plus exposés. D'une défense car la connaissance du SI permettra réagir plus éfficacement en cas d'incident ou d'attaques. Et surtout une résilience mettre en place un plan de continuité d'activité numérique ou non. 
 
-1. **Collecte des informations** :
+## Plan de travail : analyse 
+Pour la réalisation de la cartographie les différentes étapes nous permettront d'atteindre nos objectifs : 
+
+**Collecte des informations** :
 
    - Réunir les documents existants sur l'infrastructure IT actuelle.
    - Rencontrer les différents responsables de services pour obtenir des informations supplémentaires.
-2. **Identification des composants du SI** :
+
+**Identification des composants du SI** :
 
    - Réseaux (LAN, WAN, VLAN).
    - Serveurs (physiques, virtuels).
    - Applications métiers (AxelNet, MobiliEcole).
    - Bases de données (MySQL, PostgreSQL).
    - Postes de travail (PC, tablettes).
-3. **Représentation graphique** :
+   
+**Représentation graphique** :
 
-   - Utiliser un outil de mind mapping pour créer une représentation visuelle du SI.
-     * Nœuds principaux : Réseaux LAN, WAN, VLAN, Serveurs (physiques, virtuels), Applications métiers (AxelNet, MobiliEcole), Bases de données (MySQL, PostgreSQL), Postes de travail (PC, tablettes).
-     * Sous-nœuds : détailler chaque composant en incluant des informations telles que les adresses IP, les versions logicielles, les interconnexions, etc.
-4. **Relations et interconnexions** :
+Utiliser un outil de mind mapping pour créer une représentation visuelle du SI.
+   Nœuds principaux : Réseaux LAN, WAN, VLAN, Serveurs (physiques, virtuels), Applications métiers (AxelNet, MobiliEcole), Bases de données (MySQL, PostgreSQL), Postes de travail (PC, tablettes).
+   Sous-nœuds : détailler chaque composant en incluant des informations telles que les adresses IP, les versions logicielles, les interconnexions, etc.
+**Relations et interconnexions** :
 
    - Identifier et représenter les liens entre les différents composants du SI.
    - Utiliser des flèches pour indiquer les flux d'informations ou de données entre les composants.
-5. **Documentation complémentaire** :
+**Documentation complémentaire** :
 
    - Ajouter des notes ou des commentaires pour fournir des explications supplémentaires sur certains éléments du SI.
    - Inclure des informations sur la sécurité, la disponibilité et la performance de chaque composant.
-6. **Mise à jour régulière** :
+**Mise à jour régulière** :
 
    - Planifier des sessions de mise à jour régulières pour maintenir la cartographie du SI à jour avec les évolutions et les changements.
-7. **Partage et collaboration** :
+   
+**Partage et collaboration** :
 
    - Utiliser un outil collaboratif pour permettre aux différentes parties prenantes d'accéder à la cartographie du SI et de contribuer aux mises à jour.
-8. **Utilisation de la cartographie du SI** :
+**Utilisation de la cartographie du SI** :
 
    - Aider à la prise de décision en identifiant les points faibles et les opportunités d'amélioration du SI.
    - Faciliter la communication et la compréhension entre les différents acteurs du SI.
    - Servir de référence lors de l'élaboration de nouvelles stratégies ou de nouveaux projets.
 
-## Cartographie du système d'information : Piste de réflexion
-
-- [ ] A Faire
-
-1. Liste des corps métiers :
-2. Le Découpage Réseau
-
-   - Le Réseau
-   - Le Sous-Réseau
-3. L'inventaire du parc informatique
-
-   - Les Ordinateurs Portables
-   - Les Ordinateurs Fixes
-   - Les Tablettes
-   - Les Téléphones Portables
-   - Les Téléphones Fixes
-   - Les Imprimantes
-   - Les Caméras connectées
-   - Les Serveurs
-   - Les Switchs
-   - Les licences (MsOffice_365)
-4. Départements ou Services Municipaux
-5. Outils, Logiciels utilisés
-6. Internes
-7. Externes
-8. Criticité (élevée, moyen, faible, non défini)
-9. Urgent
-10. Important
-11. Tableau visuels
-12. Nomenclatures
-13. Projets en cours
-14. Les Acteurs
-15. Observations
-16. Liste de potentiel logiciel de cartographie
-17. Rôle Délégué à la protection des données (DPO)
-18. Règlement Général sur la Protection des Données (RGPD)
-
 ## Benchmark des communes ayant fait une cartographie de leur système d'information
 
 #### Benchmark : Logiciels libres Architecture d'entreprise (AE)
 
-1. Modelio
+|N°|Nom|lien|description|Avantages|Inconvenients|Notes|
+|:--|:---|:---|:---------|:---------|:---------|:---------|
+|1|Modelio|[lien vers le site](https://www.modelio.org/)|modélisation de données|s'installe et se désinstalle facilement|Ne permet pas le partage entre plusieurs utilisateurs autorisés|
+|2|Visual Paradigm|[consulter le site](https://www.visual-paradigm.com)|Online|SAAS exclusif| Serveurs externes|
+|3|ADOIT|[site](https://www.boc-group.com/fr/adoit/get-started/)| solution payante| clé en main| gestion externe et coût|
+|4|Arch imatetool|[site](https://www.archimatetool.com/)| excellent et opensource|gratuit puissant| courbe d'apprentissage|
+|5|Draw.io|[site_cloud](https://app.diagrams.net/)| hybride, locale et cloud|multiplateforme| Pas de prise en compte des recommendation ANSII|
+|6|Mercator|[site_github](https://github.com/dbarzin/mercator/tree/master)|Norme ISO27001:2013 utilisé par 15 centres hospitaliers 3 communes en France.|née d'un besoin spécifique, en lien avec les récommandations ANSII| Suivi des Mises à jour, veille obligatoire|
 
-   - Installation : [lien vers le site](https://www.modelio.org/). L'outil est on premise, s'installe et se désinstalle facilement. Sous licence GNU-GPL, Modelio gère bien un référentiel d'objets d'entreprise. Il ne permet pas le partage entre plusieurs utilisateurs autorisés. On peut juste exporter le projet, le transmettre à un autre utilisateur qui pourra l'importer. Modelio propose des diagrammes de types Business Process Modeling (BPMN) et UML.
-2. Visual Paradigm (online)
-
-   - SaaS online uniquement, [consulter le site](https://www.visual-paradigm.com). L'outil offre plusieurs templates variés, au choix de l'utilisateur.
-3. ADOIT
-4. Archi (Arch imatetool)
-5. GenMyModel
-6. Draw.io
-7. Mercator
-
+## Les vues
 ### Métiers : Services de la Commune
 
 !!! info "Ecosystème"
     Vue d'ensemble : Processus, technologies, données, personnes
 
-    Vue métier du SI : Processus et information clés qui sont nécessaire pour que le SI remplisse sa fonction. "Valeurs Métiers"
+    Vue métier du SI : Processus et information clés qui sont nécessaires pour que le SI remplisse sa fonction. "Valeurs Métiers"
 
 #### Tableau des Métiers : Vue Métier
 
@@ -157,7 +132,7 @@ Avant de commencer, assurez-vous de disposer des éléments suivants :
   - Disque : 20 Go
   - VCPU : 2
 
-## Installation
+### Installation
 
 ### Mise à jour du système
 
@@ -172,11 +147,11 @@ dnf update --refresh -y
 Installez les dépendances nécessaires en exécutant les commandes suivantes :
 
 ```bash
-dnf install php-zip php-curl php-mbstring php-dom php-ldap php-soap php-xdebug php-mysql php-gd libapache2-mod-php php-fpm php-mysqlnd
+dnf install php-zip php-curl php-mbstring php-dom php-ldap php-soap php-xdebug php-gd php-fpm php-mysqlnd
 dnf install httpd
 ```
 
-### Configuration d'Apache
+### Fedora : Service Apache 
 
 Démarrez le service Apache et configurez-le pour qu'il démarre automatiquement au démarrage du système :
 
@@ -185,7 +160,7 @@ systemctl start httpd
 systemctl enable httpd
 ```
 
-### Installation de MariaDB
+### SGBDR : Installation de MariaDB
 
 Installez MariaDB en exécutant la commande suivante :
 
@@ -193,39 +168,50 @@ Installez MariaDB en exécutant la commande suivante :
 dnf install mariadb-server
 ```
 
-Démarrez le service MariaDB et configurez-le pour qu'il démarre automatiquement au démarrage du système :
+Démarrez le service MariaDB, vérifier et configurer pour qu'il démarre automatiquement au démarrage du système :
 
 ```bash
+systemctl status mariadb
 systemctl start mariadb
 systemctl enable mariadb
+# Je vais rendre le service persistant grâce à la commande suivante : 
+systemctl enable mariadb.service
 ```
 
 ### Installation de Git et Composer
 
-Installez Git et Composer en exécutant les commandes suivantes :
+J'installe Git, Graphiz et Composer, git pour le versionning, graphiz bibliothèque pour les vues et composer pour la gestion du site avec le framework Laravel,taper les commandes suivantes :
 
 ```bash
-dnf install git composer
+dnf install git  graphiz composer -y
 ```
 
-## Configuration de Mercator
+## Mise en route du projet
 
-Clonez le projet Mercator depuis GitHub en exécutant la commande suivante :
+Avant de cloner le projet sous github je vais créer un dossier pour le projet de la cartographie nommer par mes soins le plus simplement du monde et lui accorder des droits.
 
 ```bash
-git clone https://www.github.com/dbarzin/mercator /var/www/mercator
+cd /var/www && mkdir vdrCarto && chown $USER:$GROUP
+```
+
+Ensuite Clonez le projet Mercator depuis GitHub en exécutant la commande suivante :
+
+```bash
+git clone https://www.github.com/dbarzin/mercator /var/www/vdrCarto
 ```
 
 Accédez au répertoire du projet Mercator :
 
 ```bash
-cd /var/www/mercator/mercator
+cd /var/www/vdCarto/mercator
 ```
 
 Mettez à jour les dépendances de Composer en exécutant la commande suivante :
 
 ```bash
 composer update
+# au besoin 
+composer require
 ```
 
 Publiez tous les paquets depuis le gestionnaire des paquets de PHP en exécutant la commande suivante :
@@ -233,27 +219,11 @@ Publiez tous les paquets depuis le gestionnaire des paquets de PHP en exécutant
 ```bash
 php artisan vendor:publish --all
 ```
-
 ## Configuration de la base de données
-
-### Installation de MySQL
-
-Installez MySQL en exécutant la commande suivante :
-
-```bash
-dnf install mysql-server
-```
-
-Démarrez le service MySQL et configurez-le pour qu'il démarre automatiquement au démarrage du système :
-
-```bash
-systemctl start mysqld
-systemctl enable mysqld
-```
-
 ### Création de la base de données
 
-Connectez-vous à MySQL en tant qu'utilisateur root et créez une base de données pour Mercator :
+l faudrait se connecter afin de pouvoir mettre en place une base de données MySQL.
+En tant qu'utilisateur root et créez une base de données pour Mercator :
 
 ```sql
 mysql -u root -p
@@ -274,6 +244,20 @@ cp .env.example .env
 ```
 
 Modifiez le fichier `.env` pour y ajouter les informations de connexion à la base de données.
+J'utilise comme éditeur de texte vim : `vim .env`
+```txt
+## .env file
+DB_CONNECTION=mysql
+# DB_CONNECTION=pgsql.env si nous utilison postgresql
+# DB_HOST=127.0.0.1 : si nous restons sur notre machine en locale
+DB_HOST=10.12.110.X 
+DB_PORT=3306
+# Comment DB_PORT for pgsql
+DB_DATABASE=mercator
+DB_USERNAME=mercator_user
+DB_PASSWORD=s3cr3t
+
+```
 
 Exécutez les migrations pour créer les tables de la base de données :
 
@@ -303,8 +287,20 @@ php artisan serve -d
 php artisan server --host 10.110.12.158 --port 8000
 ```
 
-Vous pouvez maintenant accéder à l'application Mercator depuis votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000).
+Vous pouvez maintenant accéder à l'application Mercator depuis votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000). Sinon en virtuelle comme dans mon cas de figure sur l'adresse de votre hote virtuel sur le port 8000.
 
 ## Prise en main
+Pour la première connection important : 
+!!! important "username et password"
+    `admin@admin.com` `password:password`
 
-Une fois connecté, vous pouvez commencer à remplir et administrer les données internes
+Une fois connecté, vous pouvez commencer à remplir et administrer les données internes du système.
+Pour des raisons évidentes de sécurité nous allons créer un admin, et gérer ses droits. N'oubliez pas de bien supprimer celui de l'exemple.
+
+[image user](/docs/images/merc_vdr_create_new_user.png)
+
+## Composition de la vue du système d'information
+J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
+Il n'en demeure moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI. Dans un sens l'outil est née d'un réel besoin de constat de sous effectif, d'un besoin de la compréhension globale du SI, plus qu'un inventaire il permet de comprendre les relations métiers et informatique
+
+<iframe src="https://slides.com/florentmalo/vdr_rapport-de-stage_si/embed" width="576" height="420" title="VDR_Rapport de stage_SI" scrolling="yes" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
