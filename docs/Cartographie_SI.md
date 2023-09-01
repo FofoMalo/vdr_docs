@@ -303,8 +303,6 @@ Pour la première connection important :
 Une fois connecté, vous pouvez commencer à remplir et administrer les données internes du système.
 Pour des raisons évidentes de sécurité nous allons créer un admin, et gérer ses droits. N'oubliez pas de bien supprimer celui de l'exemple.
 
-[<img src="/docs/images/merc_vdr_create_new_user.png" width="400">](/docs/images/merc_vdr_create_new_user.png)
-
 ## Composition de la vue du système d'information
 J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
 Il n'en demeure moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI. Dans un sens l'outil est née d'un réel besoin de constat de sous effectif, d'un besoin de la compréhension globale du SI, plus qu'un inventaire il permet de comprendre les relations métiers et informatique
