@@ -1,4 +1,5 @@
 site_name: Val-de-Reuil docs
+site_url: https://fofomalo.github.io/vdr_docs/
 theme:
   name: material
   features:
@@ -48,7 +49,7 @@ plugins:
       # These fields are all optional; the defaults are as below...
       alias_type: symlink
       redirect_template: null
-      deploy_prefix: 'vdr-v'
+      deploy_prefix: ' '
       canonical_version: null
       version_selector: true
       css_dir: css
