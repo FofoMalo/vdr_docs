@@ -147,8 +147,7 @@ dnf update --refresh -y
 Installez les dépendances nécessaires en exécutant les commandes suivantes :
 
 ```bash
-dnf install php-zip php-curl php-mbstring php-dom php-ldap php-soap php-xdebug php-gd php-fpm php-mysqlnd
-dnf install httpd
+dnf install php-zip php-curl php-mbstring php-dom php-ldap php-soap php-xdebug php-gd php-fpm php-mysqlnd httpd
 ```
 
 ### Fedora : Service Apache 
@@ -191,7 +190,7 @@ dnf install git  graphiz composer -y
 Avant de cloner le projet sous github je vais créer un dossier pour le projet de la cartographie nommer par mes soins le plus simplement du monde et lui accorder des droits.
 
 ```bash
-cd /var/www && mkdir vdrCarto && chown $USER:$GROUP
+cd /var/www && mkdir vdrCarto && chown $USER:$GROUP vdrCarto
 ```
 
 Ensuite Clonez le projet Mercator depuis GitHub en exécutant la commande suivante :
@@ -222,8 +221,14 @@ php artisan vendor:publish --all
 ## Configuration de la base de données
 ### Création de la base de données
 
-l faudrait se connecter afin de pouvoir mettre en place une base de données MySQL.
+Il faudrait se connecter afin de pouvoir mettre en place une base de données MySQL.
 En tant qu'utilisateur root et créez une base de données pour Mercator :
+
+!!! warning "Sécurité production"
+      - Il faut créer un utilisateur, avec des droits administrateurs.
+      - Les commandes et la connexion ssh se feront avec ce compte et non en root
+      - Idem pour la gestion de la base de données.
+
 
 ```sql
 mysql -u root -p
@@ -248,13 +253,13 @@ J'utilise comme éditeur de texte vim : `vim .env`
 ```txt
 ## .env file
 DB_CONNECTION=mysql
-# DB_CONNECTION=pgsql.env si nous utilison postgresql
+# DB_CONNECTION=pgsql.env si nous utilisons postgresql
 # DB_HOST=127.0.0.1 : si nous restons sur notre machine en locale
 DB_HOST=10.12.110.X 
 DB_PORT=3306
 # Comment DB_PORT for pgsql
 DB_DATABASE=mercator
-DB_USERNAME=mercator_user
+DB_USERNAME=vdr_user
 DB_PASSWORD=s3cr3t
 
 ```
@@ -292,15 +297,14 @@ Vous pouvez maintenant accéder à l'application Mercator depuis votre navigateu
 ## Prise en main
 Pour la première connection important : 
 !!! important "username et password"
-    `admin@admin.com` `password:password`
+    - `admin@admin.com` 
+    - `password`
 
 Une fois connecté, vous pouvez commencer à remplir et administrer les données internes du système.
 Pour des raisons évidentes de sécurité nous allons créer un admin, et gérer ses droits. N'oubliez pas de bien supprimer celui de l'exemple.
 
-[image user](/docs/images/merc_vdr_create_new_user.png)
+[<img src="/docs/images/merc_vdr_create_new_user.png" width="400">](/docs/images/merc_vdr_create_new_user.png)
 
 ## Composition de la vue du système d'information
 J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
 Il n'en demeure moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI. Dans un sens l'outil est née d'un réel besoin de constat de sous effectif, d'un besoin de la compréhension globale du SI, plus qu'un inventaire il permet de comprendre les relations métiers et informatique
-
-<iframe src="https://slides.com/florentmalo/vdr_rapport-de-stage_si/embed" width="576" height="420" title="VDR_Rapport de stage_SI" scrolling="yes" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

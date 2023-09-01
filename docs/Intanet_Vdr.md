@@ -113,7 +113,7 @@ systemctl start docker
 # rendre globale docker, pour l'utiliser sans 'sudo'
 usermod -aG docker root
 # lancer la preview de mattermost
-docker run -name mattermost-preview -d --publish 8065:8065 mattermost/mattermost-preview
+docker run --name mattermost-preview -d --publish 8065:8065 mattermost/mattermost-preview
 docker start mattermost-preview
 # gérer le parefeu
 firewallcmd --zone=public --add-port=8065/tcp --permanent
