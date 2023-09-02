@@ -22,4 +22,4 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: pip install mike
-      - run: mike gh-deploy --force
+      - run: mkdocs gh-deploy --force
