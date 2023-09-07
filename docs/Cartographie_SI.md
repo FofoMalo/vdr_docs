@@ -4,8 +4,10 @@ La mairie de Val-de-Reuil, dans sa vision à long terme souhaite disposer d'une 
 L'état actuelle des lieux donne une vue suivante : il existe un 1. Le Responsable de la modernisation Numérique qui lui même travaille en étroite collaboration avec le Responsable de la Sécurité des Systèmes Informatique. Ce dernier porte également la casquette  d'administrateur des systèmes et du réseaux, Technicien.
 Il est assisté par un consultant extérieur pour ce qui est de la gestion des progiciels au compte de la mairie.
 Une de mes tâches principale sera d'analyser et de comprendre le besoin, fournir une solution durable permettant à la ville de se munir d'un outil efficace, propriétaire et simple à utiliser.
+
 Il existe un document élaborer par l'Agence Nationale de la Sécurité des Système d'information (ANSSI) qui donne une lecture de ce que devrait être une cartographie du SI.
-Les Organisme d'importance Vitale au sein garantissent la continuité du SI. Leur protection nécessitent une bonne lecture par les différents responsable du système d'information. La nécessité lorsqu'il n'y a que quelques personnes qui connaissent le système d'information en soi peut être une faille. 
+Les Organismes d'importances Vitales (OIV) au sein d'un système d'information garantissent la continuité du SI. Leurs protections nécessitent une bonne lecture par les différents acteurs et responsable du système d'information. Une nécessité de mettre en place une cartographie du SI est que lorsqu'il n'y a que quelques personnes qui connaissent le système d'information en soi peut être une faille de sécurité enorme pour l'organisme en question. 
+
 > Nul n'est à l'abri d'une erreur.
 
 C'est pour cela que mettre en place une cartographie qui fera les connections nécessaires des vues métiers, systèmes, réseaux permet de se munir d'outils éfficaces pour assurer une continuité des services, permettrent une meilleur intégration des système applicatifs au sein de l'environnement globale.
@@ -76,40 +78,41 @@ Utiliser un outil de mind mapping pour créer une représentation visuelle du SI
 
 #### Tableau des Métiers : Vue Métier
 
-| Nom                                    | Description                 | Responsable                      | @mail                    | code |
-| :------------------------------------- | :-------------------------- | :------------------------------- | :----------------------- | :--- |
-| Finances                               | Administration et Finances  | Maria Guibert                    | mguibert@valdereuil.fr   | 1    |
-| Ressources Humaines                    | Administration et Finance   | Elodie Barbey, Matthieu Chevanne | mchevanne@valdereuil.fr  | 1    |
-| Centre Communal d'action social (CCAS) | Directions Opérationnelles | Sonia Rossignol                  | srossignol@valdereuil.fr | 1    |
-| Enfance-Jeunesse-et-emploi             | CCAS                        | Agnès Dupain                    | adupain@valdereuil.fr    | 1    |
+| Nom   | Description                 | Responsable                      | @mail                    | granularité |
+| :-----| :-------------------------- | :------------------------------- | :----------------------- | :--- |
+| Finances                               | Administration et Finances  | M G | @valdereuil.fr   | 1 |
+| Ressources Humaines                    | Administration et Finance   | E B, M C | @valdereuil.fr  | 1|
+| Centre Communal d'action social (CCAS) | Directions Opérationnelles  | S R | @valdereuil.fr | 1 |
+| Enfance-Jeunesse-et-emploi             | CCAS                        | A D | @valdereuil.fr | 1 |
 
 #### Tableau services : Vue Processus
 
 !!! info "Vue Processus"
-    Il me faudra décomposer la gestion de la paie :
-    Besoins : Procéder utiliser pour effectuer la paie
+    Il me faudra commencer par décomposer la gestion de la paie :
+    identifier les Besoins et processus utilisés pour effectuer la paie.
 
-| Services                        | Processus                                                                       | Logiciels |
-| :------------------------------ | :------------------------------------------------------------------------------ | :-------- |
-| Gestion des ressources humaines | -Paie -Carrière -Agents -Retraite -Congés                                     | x         |
-| Enfance et Jeunesse             | Inscription -Revenus -Données sur la santé des enfants                        | x         |
-| Tiers, Subvention Budget        | Données_Financières_et_Bancaires -Données_Personnelles -Données_Entreprises | x         |
+| Services                        | Processus                                                         | Logiciels |
+| :------------------------------ | :---------------------------------------------------------------- | :-------- |
+| Gestion des ressources humaines | -Paie -Carrière -Agents -Retraite -Congés                                     | x  |
+| Enfance et Jeunesse             | Inscription -Revenus -Données sur la santé des enfants                        | x  |
+| Tiers, Subvention Budget        | Données_Financières_et_Bancaires -Données_Personnelles -Données_Entreprises   | x  |
 
 #### Tableau : Vue Application
 
 !!! info "Vue applicative"
-    Décrire les composants du logiciels du SI , des services offerts, et les flux de données entre eux.
-    La vue de l'administration : Nous allons répertorier les périmètres et les niveaux de privilèges : utilisateurs et admin
+    Décrire les composants du logiciels du SI, des services offerts, et les flux de données entre eux.
+    La vue de l'administration : Nous allons répertorier les périmètres et les niveaux de privilèges c'est à dire les  utilisateurs et admin du SI.
 
 | Applications/Logiciels | Services A                          | Service B  | Données         |
 | :--------------------- | :---------------------------------- | :--------- | :--------------- |
 | Horoquartz -> 2        | Gestion des Ressources Humaines-> 3 | Finances 4 | <-temps/agents 1 |
+|AxelNet -> TeamNet      | portail_famille->Enfance-jeunesse-Emploi hygiène|Finances|reservation, paiement, activités scolaires|
 
 #### Tableau : Vue Infrastructure
 
 !!! info "Vue Infrastructure"
-   La vue des Infra Logiques : Cloisonnement logique des réseaux, la définition des plages d'adresses IP, les VLAN, des fonctions de Filtrages
-   La vue des Infra Physique : Description des équipements physique utilisés par le SI
+   La vue des Infra Logiques : Cloisonnement logique des réseaux, la définition des plages d'adresses IP, les VLAN, WLAN,IPBX des fonctions de Filtrages
+   La vue des Infra Physique : Description des équipements physiques utilisés par le SI
 
 | Services                               | Plage @IP | Nom ou code VLAN | Equipements          | Licences      |
 | :------------------------------------- | :-------- | :--------------- | :------------------- | :------------ |
@@ -117,10 +120,12 @@ Utiliser un outil de mind mapping pour créer une représentation visuelle du SI
 | Ressources Humaines                    |           | 1                | PC, Workstation      | ...........   |
 | Centre Communal d'action social (CCAS) |           | 1                | PC, Workstation      | ............. |
 | Enfance-Jeunesse-Petite Enfance CCAS   |           | 1                | PC, Workstation      | ............. |
+| Services Informatiques                 |xxxxxxxxxx|xxxxxxxxxxxxxxxxxxx|Serveur physique : constructeur|xxxxxxx|
+
 
 ## Mercator
 
-Mercator est un outil open source permettant de mettre en place une cartographie du système d'information. Il respecte le guide mis en place par l'ANSSI et a été développé par Didier Barzin, RSSI.
+Mercator est un outil open source permettant de mettre en place une cartographie du système d'information. Il respecte le guide mis en place par l'ANSSI et a été développé par Didier Barzin, RSSI. Je fais une veille actualisé depuis le dépôt github du projet. La dernière version est `Maturity 1c`. 
 
 ### Prérequis
 
@@ -133,7 +138,7 @@ Avant de commencer, assurez-vous de disposer des éléments suivants :
   - VCPU : 2
 
 ### Installation
-
+Installation et configuration d'un serveur fedora. La documentation officielle fournit une meille explication sur les différentes méthodes d'installation. Dans ce projet je travaille dans un environnement virtuelle sous Vmware workstation v16.
 ### Mise à jour du système
 
 Avant d'installer Mercator, mettez à jour votre système en exécutant la commande suivante :
@@ -145,6 +150,8 @@ dnf update --refresh -y
 ### Installation des dépendances
 
 Installez les dépendances nécessaires en exécutant les commandes suivantes :
+
+[![asciicast](https://asciinema.org/a/l5YssUIr0LHP75nVumpGGGkh9.svg)](https://asciinema.org/a/l5YssUIr0LHP75nVumpGGGkh9)
 
 ```bash
 dnf install php-zip php-curl php-mbstring php-dom php-ldap php-soap php-xdebug php-gd php-fpm php-mysqlnd httpd
@@ -158,7 +165,6 @@ Démarrez le service Apache et configurez-le pour qu'il démarre automatiquement
 systemctl start httpd
 systemctl enable httpd
 ```
-
 ### SGBDR : Installation de MariaDB
 
 Installez MariaDB en exécutant la commande suivante :
@@ -172,14 +178,15 @@ Démarrez le service MariaDB, vérifier et configurer pour qu'il démarre automa
 ```bash
 systemctl status mariadb
 systemctl start mariadb
-systemctl enable mariadb
 # Je vais rendre le service persistant grâce à la commande suivante : 
 systemctl enable mariadb.service
 ```
-
 ### Installation de Git et Composer
 
 J'installe Git, Graphiz et Composer, git pour le versionning, graphiz bibliothèque pour les vues et composer pour la gestion du site avec le framework Laravel,taper les commandes suivantes :
+
+
+[![asciicast](https://asciinema.org/a/QcMIjt4c46OETXphq7NcYdmYc.svg)](https://asciinema.org/a/QcMIjt4c46OETXphq7NcYdmYc)
 
 ```bash
 dnf install git  graphiz composer -y
@@ -194,6 +201,8 @@ cd /var/www && mkdir vdrCarto && chown $USER:$GROUP vdrCarto
 ```
 
 Ensuite Clonez le projet Mercator depuis GitHub en exécutant la commande suivante :
+
+[![asciicast](https://asciinema.org/a/pu73MJ9jL0aHtOam24B8l7A1K.svg)](https://asciinema.org/a/pu73MJ9jL0aHtOam24B8l7A1K)
 
 ```bash
 git clone https://www.github.com/dbarzin/mercator /var/www/vdrCarto
@@ -234,11 +243,13 @@ En tant qu'utilisateur root et créez une base de données pour Mercator :
 mysql -u root -p
 
 CREATE DATABASE mercator CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER 'vrd_user'@'localhost' IDENTIFIED BY 's3cr3t';
+CREATE USER 'vrd_user'@'localhost' IDENTIFIED BY 'xxxxxx';
 GRANT ALL PRIVILEGES ON mercator.* TO 'vrd_user'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
+
+[![asciicast](https://asciinema.org/a/7mUmtHSI4aDhbsDBNBGFGcyxw.svg)](https://asciinema.org/a/7mUmtHSI4aDhbsDBNBGFGcyxw)
 
 ### Configuration de Mercator
 
@@ -260,7 +271,7 @@ DB_PORT=3306
 # Comment DB_PORT for pgsql
 DB_DATABASE=mercator
 DB_USERNAME=vdr_user
-DB_PASSWORD=s3cr3t
+DB_PASSWORD=xxxxxx
 
 ```
 
@@ -288,11 +299,11 @@ Démarrez le serveur web en exécutant la commande suivante :
 
 ```bash
 php artisan serve -d
-# Dans mon exemple en virtuelle pour accéder à l'hote depuis mon addresse il faut lancer la commande suivante 
-php artisan server --host 10.110.12.158 --port 8000
+# Dans mon exemple en virtuelle pour accéder à l'hôte depuis mon addresse il faut lancer la commande suivante 
+php artisan server --host 10.110.XX.XXX --port 8000
 ```
 
-Vous pouvez maintenant accéder à l'application Mercator depuis votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000). Sinon en virtuelle comme dans mon cas de figure sur l'adresse de votre hote virtuel sur le port 8000.
+Vous pouvez maintenant accéder à l'application depuis votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000). Sinon en virtuelle comme dans mon cas de figure sur l'adresse de votre hôte virtuel sur le port 8000.
 
 ## Prise en main
 Pour la première connection important : 
@@ -303,6 +314,23 @@ Pour la première connection important :
 Une fois connecté, vous pouvez commencer à remplir et administrer les données internes du système.
 Pour des raisons évidentes de sécurité nous allons créer un admin, et gérer ses droits. N'oubliez pas de bien supprimer celui de l'exemple.
 
-## Composition de la vue du système d'information
+### Sécurité: Serveur et de la base de données
+
+1- Serveur : 
+Lister tous les services en cours d'exécution afin de déterminer les services qui ne sont pas utiles pour l'exécution de notre base de données afin de limiter les surfaces d'attaques.
+
+```bash 
+sudo dnf lsof -i
+# lister les processus en cours d'exécution
+sudo systemctl | grep running
+# analyser et arrếter les processus qui ne sont pas utiles à l'éxécution
+sudo systemctl stop bluetooth.service && sudo systemctl disable bluetooth.service
+
+```
+2- Connection ssh
+Editer le fichier de configuration, changer le port d'accès ssh. Interdire la connection ssh via superuser (root). Il faut créer un utilisateur spécifique ou un group spécifique pour la connection au serveur.
+Restreindre les accès à une plage d'adresse spécifique : `192.168.x.x dans le fichier etc/ssh/sshd_config`
+
+## Composition de la vue du système d'informations
 J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
-Il n'en demeure moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI. Dans un sens l'outil est née d'un réel besoin de constat de sous effectif, d'un besoin de la compréhension globale du SI, plus qu'un inventaire il permet de comprendre les relations métiers et informatique
+Il n'en demeure pas moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI. Dans un sens l'outil est née d'un réel besoin de constat de sous effectif, d'un besoin de la compréhension globale du SI, plus qu'un inventaire il permet de comprendre les relations métiers et informatique.
