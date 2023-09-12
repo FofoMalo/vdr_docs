@@ -6,12 +6,12 @@ Il est assisté par un consultant extérieur pour ce qui est de la gestion des p
 Une de mes tâches principale sera d'analyser et de comprendre le besoin, fournir une solution durable permettant à la ville de se munir d'un outil efficace, propriétaire et simple à utiliser.
 
 Il existe un document élaborer par l'Agence Nationale de la Sécurité des Système d'information (ANSSI) qui donne une lecture de ce que devrait être une cartographie du SI.
-Les Organismes d'importances Vitales (OIV) au sein d'un système d'information garantissent la continuité du SI. Leurs protections nécessitent une bonne lecture par les différents acteurs et responsable du système d'information. Une nécessité de mettre en place une cartographie du SI est que lorsqu'il n'y a que quelques personnes qui connaissent le système d'information en soi peut être une faille de sécurité enorme pour l'organisme en question. 
+Les Organismes d'importances Vitales (OIV) au sein d'un système d'information garantissent la continuité du SI. Leurs protections nécessitent une bonne lecture par les différents acteurs et responsable du système d'information. Une nécessité de mettre en place une cartographie du SI est que lorsqu'il n'y a que quelques personnes qui connaissent le système d'information en soi peut être une faille de sécurité énorme pour l'organisme en question. 
 
 > Nul n'est à l'abri d'une erreur.
 
 C'est pour cela que mettre en place une cartographie qui fera les connections nécessaires des vues métiers, systèmes, réseaux permet de se munir d'outils éfficaces pour assurer une continuité des services, permettrent une meilleur intégration des système applicatifs au sein de l'environnement globale.
-En somme la ville et ses responsables auront une maîtrise du système d'information, la mairie disposera d'une connaissance de l'ensemble des composants du SI. De la protection du système d'information; nous pourrions en effet mieux identifier les systèmes les plus critiques et les plus exposés. D'une défense car la connaissance du SI permettra réagir plus éfficacement en cas d'incident ou d'attaques. Et surtout une résilience mettre en place un plan de continuité d'activité numérique ou non. 
+En somme la ville et ses responsables auront une maîtrise du système d'information, la mairie disposera d'une connaissance de l'ensemble des composants du SI. De la protection du système d'information; nous pourrions en effet mieux identifier les systèmes les plus critiques et les plus exposés. D'une défense car la connaissance du SI permettra réagir plus efficacement en cas d'incident ou d'attaques. Et surtout une résilience mettre en place un plan de continuité d'activité numérique ou non. 
 
 ## Plan de travail : analyse 
 Pour la réalisation de la cartographie les différentes étapes nous permettront d'atteindre nos objectifs : 
