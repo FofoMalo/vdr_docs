@@ -42,7 +42,7 @@ Sauvegarde faite sur la machine distante disponible dans le dossier : C:\outils 
       [document complémentaire](https://www.vmware.com/techpapers.html)
 
 !!! important "Bibiothèque partagé"
-     [Lien de lecture](https://docs.vmware.com/share/b0e058e558983c20f66775f67c0f5436)
+     [Lien de lecture](https://docs.vmware.com/)
 
 
 ### Ma configuration VMware_Workstation
