@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+__vdrDocsUtiles/
 
 # Spyder project settings
 .spyderproject
