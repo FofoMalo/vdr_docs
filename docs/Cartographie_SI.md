@@ -1,5 +1,7 @@
 # Cartographie_SI
-## Cahier des charges : Analyse du besoin, Introduction
+## Cahier des charges : Analyse du besoin, 
+
+### Introduction
 La mairie de Val-de-Reuil, dans sa vision à long terme souhaite disposer d'une cartographie de son système d'information. Il n'existe actuellement pas en l'état un document, une méthode de ce genre permettant d'avoir une vue globale du système d'information.
 L'état actuelle des lieux donne une vue suivante : 
 il existe un (1) Responsable de la modernisation Numérique qui lui même travaille en étroite collaboration avec le Responsable de la Sécurité des Systèmes Informatique. 
@@ -93,10 +95,10 @@ Pour les besoins d'impressions nous pouvons également définir les colonnes qui
 
 | Nom   | Description                 | Responsable                      | @mail                    | granularité |
 | :-----| :-------------------------- | :------------------------------- | :----------------------- | :--- |
-| Finances                               | Administration et Finances  | M G | @valdereuil.fr   | 1 |
-| Ressources Humaines                    | Administration et Finance   | E B, M C | @valdereuil.fr  | 1|
-| Centre Communal d'action social (CCAS) | Directions Opérationnelles  | S R | @valdereuil.fr | 1 |
-| Enfance-Jeunesse-et-emploi             | CCAS                        | A D | @valdereuil.fr | 1 |
+| Finances                               | Administration et Finances  | Resp | @valdereuil.fr   | 1 |
+| Ressources Humaines                    | Administration et Finance   | Resp | @valdereuil.fr  | 1|
+| Centre Communal d'action social (CCAS) | Directions Opérationnelles  | Resp | @valdereuil.fr | 1 |
+| Enfance-Jeunesse-et-emploi             | CCAS                        | Resp | @valdereuil.fr | 1 |
 
 #### Tableau services : Vue Processus
 
@@ -133,7 +135,7 @@ Pour les besoins d'impressions nous pouvons également définir les colonnes qui
 | Ressources Humaines                    |           | 1                | PC, Workstation      | ...........   |
 | Centre Communal d'action social (CCAS) |           | 1                | PC, Workstation      | ............. |
 | Enfance-Jeunesse-Petite Enfance CCAS   |           | 1                | PC, Workstation      | ............. |
-| Services Informatiques                 |xxxxxxxxxx|xxxxxxxxxxxxxxxxxxx|Serveur physique : constructeur|xxxxxxx|
+| Services Informatiques                 |           |                  |Serveur physique : constructeur|      |
 
 
 ## Mercator
@@ -365,31 +367,41 @@ select `User`, `HOST`, `Process_priv`, `Reload_priv` FROM mysql.user;
 
 
 ```bash
-#! bin/bash
-# settings de la date pour le dossier
-NOW = $(date +%Y%m%d%H%M)
+#!/bin/bash
+# Configuration de la date pour le dossier de sauvegarde
+NOW=$(date +%Y%m%d%H%M)
 echo $NOW
-backupDir=/home/fmalo/plan_de_sauvegarde/$NOW
-# créer un nouveau dossier avec la date
+backupDir="/home/fmalo/plan_de_sauvegarde/$NOW"
+
+# Création d'un nouveau dossier avec la date
 mkdir $backupDir
-# sauvegarde de la base de données mariadb
-mariadb-dump -u vdr_admin -pnu11pvdr -B mercator -x -e --lock-tables --flush-logs > $backupDir/vdrcarto.sql | gzip -9> $backupDir/vdrcarto.sql.gz
+
+# Sauvegarde de la base de données MariaDB
+mariadb-dump -u vdr_admin -pnu11pvdr -B mercator -x -e --lock-tables --flush-logs > "$backupDir/vdrcarto.sql" | gzip -9 "$backupDir/vdrcarto.sql.gz"
 ```
+
 `crontab : 0 0 * * 1,5`
 activer le cron avec la commande `crontab -e`
-cette ligne cron exécutera le script à 15 heures le lundi et le vendredi de chaque semaine.
+
+Explication du script:
+Ce script bash effectue les opérations suivantes :
+
+Il génère une date au format "YYYYMMDDHHMM" et la stocke dans la variable NOW.
+Il crée un nouveau répertoire de sauvegarde avec le nom de la date générée.
+Il utilise la commande mariadb-dump pour sauvegarder la base de données "mercator" dans un fichier "vdrcarto.sql" situé dans le répertoire de sauvegarde.
+Il compresse le fichier "vdrcarto.sql" avec gzip, en obtenant "vdrcarto.sql.gz" dans le même répertoire de sauvegarde.
+Pour automatiser cette sauvegarde, j'ai configuré une tâche cron qui exécute ce script à 15 heures, les lundis et vendredis de chaque semaine.
 ## Composition de la vue du système d'informations
 J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
 Il n'en demeure pas moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI.Mercator est bien plus qu'un outil d'inventaire il permet de comprendre les relations métiers et informatique de façon plus approfondie.
 
 ### Workflow
 - [x] Présentation PPTX
-- [ ] Documentation en ligne
-- [ ] Suivi et mis à jour du système
+- [x] Documentation en ligne
+- [x] Suivi et mis à jour du système
 - [ ] Choisir les futurs cartographers
 - [ ] Définir les auditeurs du système
 - [ ] Formation et présentation au différents services (sensibilisation)
 - [ ] Veille Common vulnerabilities and exposures
 - [ ] Backup vm et données de la base
-- [ ] Script pour la conservation et la suppression automatique des sauvegardes
-
+- [ ] Script pour la conservation et la suppression automatique des sauvegarde.
