@@ -138,7 +138,7 @@ Pour les besoins d'impressions nous pouvons également définir les colonnes qui
 | Services Informatiques                 |           |                  |Serveur physique : constructeur|      |
 
 
-## Mercator
+## Application : Mercator pour la cartographie du SI
 
 Mercator est un outil open source permettant de mettre en place une cartographie du système d'information. Il respecte le guide mis en place par l'ANSSI et a été développé par Didier Barzin. La dernière version est `Maturity 1c`. C'est l'outil qui reponds le plus au besoin de la municipalité. L'historique du développement du projet est assez similaire à celui de la ville de Val-de-Reuil. Un besoin d'avoir l'information précise de suivi et d'évolution du SI par une petite équipe pour un grand nombre de matériel, logiciel, et projet en cours.
 Dans le cas de la mairie j'ai choisi un serveur fedora car il est robuste et incorpore les fonctionnalités avant-gardistes dans l'univers des serveurs linux. Il est dérivé de RedHat, sa documentation est à jour et bien concise.  
@@ -155,8 +155,7 @@ Avant de commencer, il faut s'assurer de disposer des éléments suivants :
 
 ### Installation
 Installation et configuration d'un serveur fedora. La documentation officielle fournit une meille explication sur les différentes méthodes d'installation. Dans ce projet je travaille dans un environnement virtuelle sous Vmware workstation v16.
-### Mise à jour du système
-
+### Mis à jour : Fedora Linux (OS)
 Avant d'installer Mercator, je recommande fortement d'effectuer une mise à jour votre système en exécutant la commande suivante :
 
 ```bash
@@ -314,7 +313,6 @@ php artisan config:clear
 ## Démarrage du serveur web
 
 Démarrez le serveur web en exécutant la commande suivante :
-
 ```bash
 php artisan serve -d
 # Dans mon exemple en virtuelle pour accéder à l'hôte depuis mon addresse il faut lancer la commande suivante 
@@ -335,7 +333,7 @@ Pour des raisons évidentes de sécurité nous allons créer un nouvel admin, qu
 
 ### Sécurité: Serveur et de la base de données
 
-1. Serveur : 
+1. **Serveur** : 
 Lister tous les services en cours d'exécution afin de déterminer les services qui ne sont pas utiles pour l'exécution de notre base de données afin de limiter les surfaces d'attaques.
 
 ```bash 
@@ -346,15 +344,16 @@ sudo systemctl | grep running
 sudo systemctl stop bluetooth.service && sudo systemctl disable bluetooth.service
 
 ```
-2. Connection ssh
+2. **Connection ssh**
 Editer le fichier de configuration, changer le port d'accès ssh. Interdire la connection ssh via superuser (root). Il faut créer un utilisateur spécifique ou un group spécifique pour la connection au serveur.
 Restreindre les accès à une plage d'adresse spécifique : `192.168.x.x dans le fichier etc/ssh/sshd_config`
 
-3. Préparer un cron pour la sauvegarde :
-J'ai mis en place un petit script pour les sauvegardes de la base de données. 
+3. **Préparer un cron pour la sauvegarde** :
+J'ai mis en place un petit script pour les sauvegardes de la base de données.
+
 !!! Important "mysql-dump priviliges"
-   En lançant le script il peut y avoir un message d'erreur de connexion à la base de données pour réaliser le backup
-   Solutions : reload & process
+     En lançant le script il peut y avoir un message d'erreur de connexion à la base de données pour réaliser le backup
+     Solutions : reload & process
 
 ```mysql
 GRANT RELOAD, PROCESS ON *.* TO 'vdr_admin'@'%';
@@ -383,25 +382,77 @@ mariadb-dump -u vdr_admin -pnu11pvdr -B mercator -x -e --lock-tables --flush-log
 `crontab : 0 0 * * 1,5`
 activer le cron avec la commande `crontab -e`
 
-Explication du script:
-Ce script bash effectue les opérations suivantes :
-
-Il génère une date au format "YYYYMMDDHHMM" et la stocke dans la variable NOW.
-Il crée un nouveau répertoire de sauvegarde avec le nom de la date générée.
-Il utilise la commande mariadb-dump pour sauvegarder la base de données "mercator" dans un fichier "vdrcarto.sql" situé dans le répertoire de sauvegarde.
-Il compresse le fichier "vdrcarto.sql" avec gzip, en obtenant "vdrcarto.sql.gz" dans le même répertoire de sauvegarde.
-Pour automatiser cette sauvegarde, j'ai configuré une tâche cron qui exécute ce script à 15 heures, les lundis et vendredis de chaque semaine.
-## Composition de la vue du système d'informations
+!!! info "Explication du script"
+      Ce script bash effectue les opérations suivantes :
+      Il génère une date au format "YYYYMMDDHHMM" et la stocke dans la variable NOW.
+      Il crée un nouveau répertoire de sauvegarde avec le nom de la date générée.
+      Il utilise la commande mariadb-dump pour sauvegarder la base de données "mercator" dans un fichier "vdrcarto.sql" situé dans le répertoire de sauvegarde.
+      Il compresse le fichier "vdrcarto.sql" avec gzip, en obtenant "vdrcarto.sql.gz" dans le même répertoire de sauvegarde.
+      Pour automatiser cette sauvegarde, j'ai configuré une tâche cron qui exécute ce script à 15 heures, les lundis et vendredis de chaque semaine.
+## Modélisation: Système d'information
 J'ai fait une modélisation préalable sous yED, sous la machine qui m'a été donné durant le stage. yEd est un logiciel puissant qui permet de la modélisation du système d'information.
 Il n'en demeure pas moins qu'un outil comme mercartor répond mieux à toutes les préoccupations d'un responsable de la cartographie du SI.Mercator est bien plus qu'un outil d'inventaire il permet de comprendre les relations métiers et informatique de façon plus approfondie.
+## Suivi et mise à jour du système : 
+### git pull
+Dans le dossier var -> www -> vdrcarto lancer la commande `git pull` && `composer update`
+cette tâche peut être automasier dans un script. Dans le même état d'esprit nous pouvons affiner les rôles, cette tâche reviendra à l'administrateur.
 
-### Workflow
+## Comprendre la cartographie : !!!IMPORTANT
+
+### RGPD
+1. **Registre** :Dans cette section, nous explorons le registre RGPD en détail. Nous indiquons le nom du registre, sa description, le responsable du traitement, la finalité du traitement, les destinataires, la durée de rétention, le processus impliqué, les applications associées, et le cas échéant, nous chargeons un document référentiel 
+
+2. **Mésure de sécurité** : Nous allons examiner ici les méthodes de suivi ou de vérification de la conformité au RGPD qui ont été mises en place par les services responsables.
+### Système d'information
+1. **Macro-Processus** : Cette section vise à définir les macro-processus avec des noms explicites, en décrivant les éléments entrants et sortants. Indiquer les besoins de sécurité en tenant compte des indicateur suivants : le niveau de confidentialité, son niveau d'intégrité, son niveau de Disponibilité, et enfin le niveau de Traçabilité. Il faut également définir un propriétaire qui peut être une entité définie, et lui attribué les processus découlant de la macro.
+
+2. **Processus** : décrit l'activité soutenu par une ou plusieurs entités/Services. Il est important de situé les informations qui seront utiles dans le système d'information d'un point de vue granularité de l'information. il faut indiqué le ou les types d'activités, les applications soutenues c'est à dire celles qui soutiennent le processus. Identifier le type d'information traité par le processus ex: donnnées bancaires, données personnelles. Nommer le responsable, et tagguer la macro. Définir les besoins de sécurité du processus. 
+
+3. **Activités** : Il s'agit de nommer l'activité  de traitement, faire une description du traitement. Identifier le ou les processus lié(s). S'il existe des opérations en cours qui sont liés nous les identifions.
+
+4. **Informations** : Dans la cartographie l'information doit être identifiable, liée à un processus, avoir un propriétaire, un administrateur. Nous devons également indiquer son format de stockage, sa sensibilité, et ses besoins de sécurités du point de vue CIDT. S'il existe une contrainte réglementaire il faut le préciser et indiquer la norme en question
+### Ecosystème
+1. **Entités** : Indispensable pour la compréhension de la vue métier dans la cartographie, l'entité c'est ou le service qui participent à l'activité de traitement, manipulation des processus métiers en étroite lien avec les applications métiers identifiées. L'entité peut être interne ou externe. Nous l'identifions par son nom administratif, son niveau de sécurité, c'est à dire le type de maturité, le point de contact, le lieu de stockage des données manipulées par l'entité.
+
+2. **Relations** : En définissant la nature de la relation qui existe entre les entités, que ce soit des biens, des servies, un partenariat commercial, nous avons une vue claire des différentes interactions qui donnent une lecture sur l'impact que peut avoir une application dans sa globalité. 
+### Applications
+1. **Bloc Applicatif** : Il s'agit d'identifier le fournisseur de l'application. 
+
+2. **Applications** : Les applications métiers utilisées. il faut décire l'écosystème de l'application : le responsable, le ou les entités qui utilisent l'application, nommé un référent fonctionnel, déterminer l'éditeur, le volume d'utilisateur de l'application, le cartographe (la personne qui renseigne l'application). Nous allons également exposer l'aspect technique de l'app. Définir le type de client c'est à dire cloud, web, on-premise, si l'app est un progiciel, en développement interne, son exposition à l'externe type de solution SAAS, ou autre. Il faut aussi pour un suivi et mis à jour de l'app indiquer la date d'installation, la date de la dernière mise à jour, la documentation technique. Identifier et indiquer la liste des services applicatifs délivrés par l'application, la liste des bases de données utilisées par l'application. Son niveau de sécurité d'un point de vue CIDT.
+Très important c'est la possibilité de définir un plan de continuité et/ou de reprise d'activité Recovery time objective (RTO) et le Restart time objective. Du point de vue sécurité de l'app nous avons la possibilité d'uploader une base de données de CVE sur la plateforme. 
+Voir les commandes suviantes pour l'intégration d'une base disponible pour le common plateforme Enumeration [CPE](https:nvd.nist.gov/products/cpe) `gzip -d mercator_cpe.sql.gz` && `sudo mysql mercator < mercator_cpe.sql`.
+Faire le lien avec le système d'information et l'infrastructure logique qui héberge la solution.
+### Infrastructure logique
+0. **Entités** : Point d'entrée globale
+1. **Réseaux** : Nom du réseau identifié qui comportera une description, le type de protocole, le responsable de l'exploitation, le responsable de sécurité du système d'information, les besoins de sécurités (CIDT)
+2. **Sous-réseaux** : Un nom pour identifier notre premier sous-reseaux, sa description, la plage d'adresse et le masque de sous réseaux, sa zone de parefeu, la passerelle par défaut, son appartenance à un Vlan, le type d'allocation (dynamique ou statique)+ la passerelle (NAT) son réseau de référence, préciser s'il accède au Wi-fi ou non. Si nous avons mis en place une zone démilitarisé nous allons également le spécifié. 
+Une vue concise de l'infra logique dépendra de la description du réseau de l'entreprise, si elle n'est pas claire la gestion du rique de sécurité peut s'avérer délicate.
+
+3. **Serveurs Logiques** : Etablir la liste des serveurs logiques : Linux, Windows Server (année), hyperviseurs et Virtual Machines
+
+4. **Routeurs** : Il faut spécifier le type de routeur, son nom, ses caractériques techniques et son adresse IP. Nous allons également préciser les règles de filtrages appliqués sur le routeur (gestion des Vlans)
+
+5. **Commutateurs** : le nom de notre switch , sa drescription, son adresse ip, et ses caractérisque technique
+
+6. **Vlan** : Il existera autant de vlan que nécessaire pour une meilleur gestion qui doit être représenter dans la cartograpgie. il faut indiquer l'ensemble des sous-réseaux qui le compose 
+
+7. **Certificats** : la gestion des certificats permet d'envoyer à la personne responsable des certificats d'être prévenue dans les délais prévues pour prendre les mésures nécessaire. 
+### Infrastructure Physique
+1. **Sites** : Peut être le découpage géographie ou un découpage administratif, dans l'exemple de la municipalité il n'existe qu'un site phyqique c'est la ville. J'ai pris sur moi suite aux explications que j'ai reçu de part le RSSI de découper en deux sites : A -> B. A pour la gestion des Bâtiments connectés qui se situent sur pluisieurs zones. B normalement devrait regroupé les bâtiments non encore connecté de la mairie. Ainsi si un bâtiment doit être connecté à l'avenir son plan d'intégration au réseau existant peut être facilement réalisé.
+
+2. **Bâtiments/Salles** : L'ensemble des 8 bâtiments connectés identifiés dans la ville.
+
+3. Postes de travail, Périphériques, Borne Wifi, Téléphones : il s'agit ici de faire l'inventaire de l'ensemble des équipements informatiques de la ville.
+4. **Baies** : Serveurs physique, Commutateurs, stockage, Routeurs, Sécurité : idem réaliser l'inventaire exhaustif des acquisitions physique du matériel informatique. 
+
+
+### Workflow : amelioration continue
 - [x] Présentation PPTX
 - [x] Documentation en ligne
 - [x] Suivi et mis à jour du système
 - [ ] Choisir les futurs cartographers
 - [ ] Définir les auditeurs du système
 - [ ] Formation et présentation au différents services (sensibilisation)
-- [ ] Veille Common vulnerabilities and exposures
+- [x] Veille Common vulnerabilities and exposures [cve-search](https://github.com/cve-search/cve-search)
 - [ ] Backup vm et données de la base
 - [ ] Script pour la conservation et la suppression automatique des sauvegarde.
