@@ -1,7 +1,8 @@
 # Acceuil
 
-Cette documentation se veut progressive dans le temps. J'ai réfléchi à une solution qui me permettrait de suivre l'évolution de la documentation à travers git,il a pour vocation d'être accessible ayant les habilitations nécessaires. Pour l'instant il est public. 
-j'utlise `mkdocs` pour la rédaction de la documentation technique avec du markdown et python.
+Dans le cadre de cette documentation, je me suis engagé dans un voyage progressif à travers l'univers de l'admistration système et résaux. Mon objectif est de fournir un ensemble de ressources destiné à évoluer avec le temps.
+Pour garantir cette évolutivité j'ai adopté une solution basé sur Git, nous permettant de suivre et de mettre à jour la documentation  de manière transparente.
+Bien que cette documentation soit actuellement public sous mon github elle vise à être réservée aux personnnes disposant des autorisations nécessaires à l'avenir. Pour la rédaction technique, j'ai utilisé du `mdkocs`associé à Markdown et Python pour offrir un contenu clair et structuré.
 
 ## [Cartographie_SI](https://fofomalo.github.io/vdr_docs/Cartographie_SI/)
 !!! info "Réaliser la cartographie du Système d'information de la ville " 
@@ -23,5 +24,5 @@ j'utlise `mkdocs` pour la rédaction de la documentation technique avec du markd
 
 ## [Propositions de Clauses RGPD à intégrer aux marchés publics](https://fofomalo.github.io/vdr_docs/RGPD_Vdr/)
 
-!!! info "OpenData VDR" 
+!!! info "Clauses RGPD" 
     Mieux protéger les données utilisateurs, structurer les données des personnes, sensibiliser toutes personnnes dans la chaîne de la collecte du traitement, de la conservation, de la modification et de la destruction des données personnelles.
