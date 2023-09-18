@@ -1,1 +1,7 @@
+# requirements for core
 mkdocs-material
+markdown~=3.2
+mkdocs~=1.5
+mkdocs-material-extensions~=1.1
+pygments~=2.16
+pymdown-extensions~=10.2
