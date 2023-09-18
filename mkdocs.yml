@@ -1,5 +1,8 @@
 site_name: Val-de-Reuil docs
 site_url: https://fofomalo.github.io/vdr_docs/
+# repo
+repo_name: FofoMalo/vdr_docs
+repo_url: https://github.com/FofoMalo/vdr_docs/
 theme:
   name: material
   features:
@@ -45,9 +48,25 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: FofoMalo
+      repo: vdr_docs
 extra:
   version:
     provider: mike
+  annotate:
+    json: [.s2]
+
+# nav
+nav:
+  - Home: index.md
+  - Cartographie_SI: Cartographie_SI.md
+  - Intranet_Vdr: Intranet_Vdr.md
+  - OpenData_Vdr: OpenData_Vdr.md
+  - RGPD_Vdr: RGPD_Vdr.md
+
 
 copyright: |
   &copy; 2023 Val-de-Reuil <a href="https://github.com/FofoMalo" target "_blank" rel="glp3">Florent Malo</a>
