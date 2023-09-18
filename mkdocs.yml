@@ -38,12 +38,13 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
-  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
   - md_in_html
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
 extra:
   version:
     provider: mike
