@@ -4,7 +4,7 @@
 ### Introduction
 La mairie de Val-de-Reuil, dans sa vision à long terme souhaite disposer d'une cartographie de son système d'information. Il n'existe actuellement pas en l'état un document, une méthode de ce genre permettant d'avoir une vue globale du système d'information.
 L'état actuelle des lieux donne une vue suivante : 
-il existe un (1) Responsable de la modernisation numérique qui lui même travaille en étroite collaboration avec le Responsable de la Sécurité des Systèmes Informatique. 
+il existe un (1) Responsable de la modernisation numérisque qui lui même travaille en étroite collaboration avec le Responsable de la Sécurité des Systèmes Informatique. 
 Ce dernier porte également la casquette  d'administrateur des systèmes et du réseaux.
 Il peut être assisté par un consultant extérieur pour ce qui est de la gestion des progiciels au compte de la mairie.
 Une de mes tâches principale sera d'analyser et de comprendre le besoin, fournir une solution durable permettant à la ville de se munir d'un outil efficace, propriétaire et simple à utiliser.
@@ -15,7 +15,7 @@ Les Organismes d'importances Vitales (OIV) au sein d'un système d'information g
 > Nul n'est à l'abri d'une erreur.
 
 C'est pour cela que mettre en place une cartographie qui fera les connections nécessaires entre les différentes vues métiers, systèmes, et réseaux permettra de se munir d'outil efficace pour assurer une continuité des services, de par là favoriser une meilleur intégration des systèmes applicatifs au sein du système d'information.
-En résumé, cette approche permettra à la ville et à ses responsables d'acquérir une maîtrise totale du système d'information. La mairie aura ainsi une connaissance exhaustive de tous les composants d'importance vitale du SI. Cette maîtrise se traduira par une meilleure protection du système d'information, car nous serons en mesure d'identifier plus précisément les systèmes les plus critiques et les plus exposés. De plus, cela renforcera la capacité de défense de la ville, car une connaissance approfondie du SI permettra de réagir de manière plus efficace en cas d'incident ou d'attaque. Enfin, cette approche favorisera la résilience en permettant de mettre en place un plan de continuité d'activité, qu'il soit numérique ou non.
+En résumé, cette approche permettra à la ville et à ses responsables d'acquérir une maîtrise totale du système d'information. La mairie aura ainsi une connaissance exhaustive de tous les composants d'importance vitale du SI. Cette maîtrise se traduira par une meilleure protection du système d'information, car nous serons en mesure d'identifier plus précisément les systèmes les plus critiques et les plus exposés. De plus, cela renforcera la capacité de défense de la ville, car une connaissance approfondie du SI permettra de réagir de manière plus efficace en cas d'incident ou d'attaque. Enfin, cette approche favorisera la résilience en permettant de mettre en place un plan de continuité d'activité, qu'il soit numérisque ou non.
 ## Plan de travail : analyse du besoin 
 Pour la réalisation de la cartographie j'ai mis en place une méthode de découpage de l'information au près des personnes ressources, cela a permis de dégager les étapes suivantes : 
 
@@ -57,8 +57,8 @@ j'ai utilisé ==Xmind== (outil de mindmapping) pour créer une représentation v
 
    - Dans le plan de prise en main de l'outil de la cartographie, la gestion et les accès sont gérées par la définition des rôles :
 1. L'administrateur : il a tout les droits. Il peut créer, modifier, attribuer de nouveaux rôle
-2. Le Cartographeur : il a des droits restreints sur les objets qu'il crée. Il n'a pas d'accès aux objets utilisateurs et configuration.
-3. L'auditeur : a le droit d'accéder et d'afficher tous les objets exeption faite des utilisateurs et de la configuration 
+2. Le Cartographe : il a des droits restreints sur les objets qu'il crée. Il n'a pas d'accès aux objets utilisateurs et configuration.
+3. L'auditeur : a le droit d'accéder et d'afficher tous les objets exception faite des utilisateurs et de la configuration 
 De nouveaux rôles peuvent être créer et définie selon les besoins de la municipalité.
 
 **Utilisation de la cartographie du SI** :
@@ -81,7 +81,7 @@ je n'ai pas eu de référence dans mes recherches sur le net. Ce qui parait abso
 |6|[==Mercator==](https://github.com/dbarzin/mercator/tree/master)|Norme ISO27001:2013 utilisé par 15 centres hospitaliers 3 communes en France.|née d'un besoin spécifique, en lien avec les récommandations ANSII| Suivi des Mises à jour, veille obligatoire|utilisé|
 
 ## Les vues
-Les vues sont progressives allant du métier vers la technique, elles mêmes déclinées en vues. Ainsi tous les acteurs qui seront référenciers peuvent avoir une lecture du SI. Les données peuvent être exportées sous plusieurs formats bureautique à des fins d'analyse. 
+Les vues sont progressives allant du métier vers la technique, elles mêmes déclinées en vues. Ainsi tous les acteurs qui seront reférencés peuvent avoir une lecture du SI. Les données peuvent être exportées sous plusieurs formats bureautique à des fins d'analyse. 
 Formats disponibles : CSV, PDF, Excel.
 Pour les besoins d'impression nous pouvons également définir les colonnes qui nous intéressent afin de les exploiter.
 ### Métiers : Services de la Commune
@@ -92,7 +92,7 @@ Pour les besoins d'impression nous pouvons également définir les colonnes qui 
 
 #### Tableau des Métiers : Vue Métier
 !!! infor "Vue métier et granularité"
-     niveau 1 : informations indispensable
+     niveau 1 : informations indispensables
      niveau 2 : informations importantes
      niveau 3 : informations utiles
 
@@ -144,7 +144,7 @@ Pour les besoins d'impression nous pouvons également définir les colonnes qui 
 
 ## Application : Mercator pour la cartographie du SI
 
-Mercator est un outil open source permettant de mettre en place une cartographie du système d'information. Il respecte le guide mis en place par l'ANSSI et a été développé par ==Didier Barzin==. La dernière version est `Maturity 1c`. C'est l'outil qui reponds le plus au besoin de la municipalité. L'historique du développement du projet est assez similaire à celui de la ville de Val-de-Reuil. Un besoin d'avoir l'information précise de suivi et d'évolution du SI par une petite équipe pour un grand nombre de matériel, logiciel, et projet en cours.
+Mercator est un outil open source permettant de mettre en place une cartographie du système d'information. Il respecte le guide mis en place par l'ANSSI et a été développé par ==Didier Barzin==. La dernière version est `Maturity 1c`. C'est l'outil qui répond le plus au besoin de la municipalité. L'historisque du développement du projet est assez similaire à celui de la ville de Val-de-Reuil. Un besoin d'avoir l'information précise de suivi et d'évolution du SI par une petite équipe pour un grand nombre de matériel, logiciel, et projet en cours.
 Dans le cas de la mairie j'ai choisi un serveur [Fedora](https://fedoraproject.org/server/) car il est robuste et incorpore les fonctionnalités avant-gardistes dans l'univers des serveurs linux. Il est dérivé de RedHat, sa documentation est à jour et bien concise.  
 
 ### Prérequis
@@ -326,7 +326,7 @@ php artisan server --host 10.110.XX.XXX --port 8000
 Vous pouvez maintenant accéder à l'application depuis votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000). Sinon en virtuelle comme dans mon cas de figure sur l'adresse de votre hôte virtuel sur le port 8000.
 
 ## Prise en main
-Pour la première connection il faut utiliser les identifiants suvivants : 
+Pour la première connection il faut utiliser les identifiants suivants : 
 
 !!! important "username et password"
     - `admin@admin.com` 
@@ -400,7 +400,7 @@ Il n'en demeure pas moins qu'un outil comme mercartor répond mieux à toutes le
 ## Suivi et mise à jour du système : 
 ### git pull : mise à jour en locale depuis le dépôt distant
 Dans le dossier var -> www -> vdr_carto lancer la commande `git pull` && `composer update`
-cette tâche peut être automasier dans un script. Dans le même état d'esprit nous pouvons affiner les rôles, cette tâche reviendra à l'administrateur.
+cette tâche peut être automatiser dans un script. Dans le même état d'esprit nous pouvons affiner les rôles, cette tâche reviendra à l'administrateur.
 
 ## Comprendre la cartographie : IMPORTANT
 
@@ -411,7 +411,7 @@ cette tâche peut être automasier dans un script. Dans le même état d'esprit 
 ### Système d'information
 1. **Macro-Processus** : Cette section vise à définir les macro-processus avec des noms explicites, en décrivant les éléments entrants et sortants. Indiquer les besoins de sécurité en tenant compte des indicateur suivants : le niveau de confidentialité, son niveau d'intégrité, son niveau de Disponibilité, et enfin le niveau de Traçabilité (==CIDT==). Il faut également définir un propriétaire qui peut être une entité/services, et lui attribué les processus découlant de la macro.
 
-2. **Processus** : décrit l'activité soutenu par une ou plusieurs entités/Services. Il est important de situé les informations qui seront utiles dans le système d'information d'un point de vue granularité de l'information. il faut indiqué le ou les types d'activités, les applications soutenues c'est à dire celles qui soutiennent le processus. Identifier le type d'information traité par le processus ex: donnnées bancaires, données personnelles. Nommer le responsable, et tagguer la macro. Définir les besoins de sécurité du processus. 
+2. **Processus** : décrit l'activité soutenu par une ou plusieurs entités/Services. Il est important de situé les informations qui seront utiles dans le système d'information d'un point de vue granularité de l'information. il faut indiqué le ou les types d'activités, les applications soutenues c'est à dire celles qui soutiennent le processus. Identifier le type d'information traité par le processus ex: données bancaires, données personnelles. Nommer le responsable, et tagguer la macro. Définir les besoins de sécurité du processus. 
 
 3. **Activités** : Il s'agit de nommer l'activité  de traitement, faire une description du traitement. Identifier le ou les processus lié(s). S'il existe des opérations en cours qui sont liés, nous les identifions.
 
@@ -423,19 +423,19 @@ cette tâche peut être automasier dans un script. Dans le même état d'esprit 
 ### Applications
 1. **Bloc Applicatif** : Il s'agit d'identifier le fournisseur de l'application. 
 
-2. **Applications** : Les applications métiers utilisées. il faut décire l'écosystème de l'application : le responsable, le ou les entités qui utilisent l'application, nommé un référent fonctionnel, déterminer l'éditeur, le volume d'utilisateur de l'application, le cartographe (la personne qui renseigne l'application). Nous allons également exposer l'aspect technique de l'app. Définir le type de client c'est à dire cloud, web, on-premise, si l'app est un progiciel, en développement interne, son exposition à l'externe type de solution SAAS, ou autre. Il faut aussi pour un suivi et mis à jour de l'app indiquer la date d'installation, la date de la dernière mise à jour, la documentation technique. Identifier et indiquer la liste des services applicatifs délivrés par l'application, la liste des bases de données utilisées par l'application. Son niveau de sécurité d'un point de vue CIDT.
+2. **Applications** : Les applications métiers utilisées. il faut décrire l'écosystème de l'application : le responsable, le ou les entités qui utilisent l'application, nommé un référent fonctionnel, déterminer l'éditeur, le volume d'utilisateur de l'application, le cartographe (la personne qui renseigne l'application). Nous allons également exposer l'aspect technique de l'app. Définir le type de client c'est à dire cloud, web, on-premise, si l'app est un progiciel, en développement interne, son exposition à l'externe type de solution SAAS, ou autre. Il faut aussi pour un suivi et mis à jour de l'app indiquer la date d'installation, la date de la dernière mise à jour, la documentation technique. Identifier et indiquer la liste des services applicatifs délivrés par l'application, la liste des bases de données utilisées par l'application. Son niveau de sécurité d'un point de vue CIDT.
 Très important c'est la possibilité de définir un plan de continuité et/ou de reprise d'activité Recovery time objective (RTO) et le Restart time objective. Du point de vue sécurité de l'app nous avons la possibilité d'uploader une base de données de CVE sur la plateforme. 
-Voir les commandes suviantes pour l'intégration d'une base disponible pour le common plateforme Enumeration [CPE](https:nvd.nist.gov/products/cpe) `gzip -d mercator_cpe.sql.gz` && `sudo mysql mercator < mercator_cpe.sql`.
+Voir les commandes suivantes:gc pour l'intégration d'une base disponible pour le common plateforme Enumeration [CPE](https:nvd.nist.gov/products/cpe) `gzip -d mercator_cpe.sql.gz` && `sudo mysql mercator < mercator_cpe.sql`.
 Faire le lien avec le système d'information et l'infrastructure logique qui héberge la solution.
 ### Infrastructure logique
 0. **Entités** : Point d'entrée globale
 1. **Réseaux** : Nom du réseau identifié qui comportera une description, le type de protocole, le responsable de l'exploitation, le responsable de sécurité du système d'information, les besoins de sécurités (CIDT)
 2. **Sous-réseaux** : Un nom pour identifier notre premier sous-reseaux, sa description, la plage d'adresse et le masque de sous réseaux, sa zone de parefeu, la passerelle par défaut, son appartenance à un Vlan, le type d'allocation (dynamique ou statique)+ la passerelle (NAT) son réseau de référence, préciser s'il accède au Wi-fi ou non. Si nous avons mis en place une zone démilitarisé nous allons également le spécifié. 
-Une vue concise de l'infra logique dépendra de la description du réseau de l'entreprise, si elle n'est pas claire la gestion du rique de sécurité peut s'avérer délicate.
+Une vue concise de l'infra logique dépendra de la description du réseau de l'entreprise, si elle n'est pas claire la gestion du risque de sécurité peut s'avérer délicate.
 
-3. **Serveurs Logiques** : Etablir la liste des serveurs logiques : Linux, Windows Server (année), hyperviseurs et Virtual Machines
+3. **Serveurs Logiques** : Établir la liste des serveurs logiques : Linux, Windows Server (année), hyperviseurs et Virtual Machines
 
-4. **Routeurs** : Il faut spécifier le type de routeur, son nom, ses caractériques techniques et son adresse IP. Nous allons également préciser les règles de filtrages appliqués sur le routeur (gestion des Vlans)
+4. **Routeurs** : Il faut spécifier le type de routeur, son nom, ses caractéristiques techniques et son adresse IP. Nous allons également préciser les règles de filtrages appliqués sur le routeur (gestion des Vlans)
 
 5. **Commutateurs** : le nom de notre switch , sa drescription, son adresse ip, et ses caractérisque technique
 
@@ -443,7 +443,7 @@ Une vue concise de l'infra logique dépendra de la description du réseau de l'e
 
 7. **Certificats** : la gestion des certificats permet d'envoyer à la personne responsable des certificats d'être prévenue dans les délais prévues pour prendre les mésures nécessaire. 
 ### Infrastructure Physique
-1. **Sites** : Peut être le découpage géographie ou un découpage administratif, dans l'exemple de la municipalité il n'existe qu'un site phyqique c'est la ville. J'ai pris sur moi suite aux explications que j'ai reçu de part le RSSI de découper en deux sites : A -> B. A pour la gestion des Bâtiments connectés qui se situent sur pluisieurs zones. B normalement devrait regroupé les bâtiments non encore connecté de la mairie. Ainsi si un bâtiment doit être connecté à l'avenir son plan d'intégration au réseau existant peut être facilement réalisé.
+1. **Sites** : Peut être le découpage géographie ou un découpage administratif, dans l'exemple de la municipalité il n'existe qu'un site physique c'est la ville. J'ai pris sur moi suite aux explications que j'ai reçu de part le RSSI de découper en deux sites : A -> B. A pour la gestion des Bâtiments connectés qui se situent sur plusieurs zones. B normalement devrait regroupé les bâtiments non encore connecté de la mairie. Ainsi si un bâtiment doit être connecté à l'avenir son plan d'intégration au réseau existant peut être facilement réalisé.
 
 2. **Bâtiments/Salles** : L'ensemble des 8 bâtiments connectés identifiés dans la ville.
 
