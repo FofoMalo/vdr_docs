@@ -225,13 +225,13 @@ Ensuite, je clone le projet Mercator depuis GitHub en exécutant la commande sui
 [![asciicast](https://asciinema.org/a/pu73MJ9jL0aHtOam24B8l7A1K.svg)](https://asciinema.org/a/pu73MJ9jL0aHtOam24B8l7A1K)
 
 ```bash
-git clone https://www.github.com/dbarzin/mercator /var/www/vdrCarto
+git clone https://www.github.com/dbarzin/mercator /var/www/vdr_carto
 ```
 
 Accédez au répertoire du projet Mercator :
 
 ```bash
-cd /var/www/vdCarto/mercator
+cd /var/www/vdr_carto/mercator
 ```
 
 Mettez à jour les dépendances de Composer en exécutant la commande suivante :
@@ -455,11 +455,12 @@ Une vue concise de l'infra logique dépendra de la description du réseau de l'e
 - [x] Présentation PPTX
 - [x] Documentation en ligne
 - [x] Suivi et mis à jour du système
+- [x] Backup Données (cron)
 - [ ] Choisir les futurs cartographers
 - [ ] Définir les auditeurs du système
 - [ ] Formation et présentation au différents services (sensibilisation)
 - [x] Veille Common vulnerabilities and exposures [cve-search](https://github.com/cve-search/cve-search)
-- [ ] Backup vm et données de la base
+- [ ] Backup vm
 - [ ] Script pour la conservation et la suppression automatique des sauvegardes.
 - [ ] Config : web server( Nginx)/ou Apache
 - [ ] Générer un nouveau certificat, si non utilisé un certificat disponible: Transport Layer Secure/Secure Socket Layer connection (TLS/SSL).
