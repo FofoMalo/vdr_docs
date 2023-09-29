@@ -14,6 +14,8 @@ A terme ce document doit être alimenter au fur et à mésure afin qu'il soit le
 ### Prise en main
 #### Arborescences : Fichiers Utiles
 
+
+```txt
 Vdr_all_docs
 |__vdr_docs
    |__docs
@@ -23,7 +25,7 @@ Vdr_all_docs
       |__OpenData_Vdr.md
       |__RGPD_Vdr.md
    |__site
-   |__ "__vdrDocUtiles"
+   |__ __vdrDocUtiles
          |__20230821-Docs
          |__Vdr_ressources_documentation_mnf
          |__Cartographie_SI_Mairie.pod
@@ -38,3 +40,4 @@ Vdr_all_docs
    |__README.MD
    |__requirements.txt
 
+```
