@@ -450,13 +450,23 @@ Une vue concise de l'infra logique dépendra de la description du réseau de l'e
 3. Postes de travail, Périphériques, Borne Wifi, Téléphones : il s'agit ici de faire l'inventaire de l'ensemble des équipements informatiques de la ville.
 4. **Baies** : Serveurs physique, Commutateurs, stockage, Routeurs, Sécurité : idem réaliser l'inventaire exhaustif des acquisitions physique du matériel informatique. 
 
+## Annnexes
+
+### Reinstaller le projet sous un autre vmware-Workstation 
+Dans le cadre de la suite de mon projet, j'ai été amené à copier la machine virtuelle sous un disque dur dans l'intention de le reinstaller.
+La configuration de base, c'est à dire qu'il s'agisse du dimensionnement des disques ou de la configuration réseau n'ont pas posé de problème majeur.
+La difficulté majeur rencontré fut un message d'erreur "the specified virtual disk need to be repaired", ce message fait echo à un précédent message d'erreur "failed to update autostart configuration". En effet j'étais sur une version 17 lors de mes tests, la version la plus récente, tandisque la version d'école est une 16 Pro.
+**Solution** : 
+Ensuite sous Windows 10 il faut réparer le disque de la machine virtuelle. 
+Ouvrir le terminal `set-location C:\Programe File (x86)\Vmware\Vmware Workstation` -> lancer la commande suivante `.\vmware-vdiskmanager -R "C:\chemin\absolu\maMachineVirtuelle.vmdk`
+Se rendre sur l'onglet de la machine virtuelle actuelle ==maMachineVirtuelle==, click droit -> se rendre sur `Manage` -> choisir `change hardware Compatibility` cloner la machine sans altérer l'existant, nommer la nouvelle machine et démarrer.
 
 ### Workflow : amelioration continue
 - [x] Présentation PPTX
 - [x] Documentation en ligne
 - [x] Suivi et mis à jour du système
 - [x] Backup Données (cron)
-- [ ] Choisir les futurs cartographers
+- [ ] Choisir les futurs cartographes
 - [ ] Définir les auditeurs du système
 - [ ] Formation et présentation au différents services (sensibilisation)
 - [x] Veille Common vulnerabilities and exposures [cve-search](https://github.com/cve-search/cve-search)
